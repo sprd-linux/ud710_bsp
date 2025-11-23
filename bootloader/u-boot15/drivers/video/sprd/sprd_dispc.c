@@ -55,7 +55,7 @@ void sprd_dispc_stop(struct sprd_dispc *dispc)
 	if (dispc->core)
 		dispc->core->stop(ctx);
 }
-extern int rm69380_backlight_set(void);
+// extern int rm69380_backlight_set(void);
 int32_t sprd_dispc_flip(struct sprd_dispc *dispc,
 			struct sprd_restruct_config *config)
 {
@@ -74,7 +74,7 @@ int32_t sprd_dispc_flip(struct sprd_dispc *dispc,
     if (!ctx->is_stopped || (dispc->ctx.if_type == SPRD_DISPC_IF_EDPI))
         dispc->core->run(ctx);
 
-    rm69380_backlight_set();
+//    rm69380_backlight_set();
     return 0;
 }
 
